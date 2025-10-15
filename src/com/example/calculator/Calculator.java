@@ -9,7 +9,7 @@ public class Calculator {
         while (true)
         {
             int n1, n2;
-            double result = 0;
+            double result;
 
             //양의 정수가 입력될 때까지 다시 입력받는다.
             while (true) {
