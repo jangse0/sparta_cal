@@ -9,7 +9,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         Calculator cal2 = new Calculator();
 
-        while (true){ //
+        while (true){ //exit이 입력되면 break
             try{
                 System.out.print("첫 번째 숫자를 입력하세요: ");
                 int num1 = scanner.nextInt();
@@ -21,7 +21,7 @@ public class App {
 
                 double result = cal2.calculate(num1, num2, operator);
                 System.out.println("----------------\n결과는 " + result);
-            }catch(InputMismatchException e){
+            }catch(InputMismatchException e){   //잘못된 입력 처리
                 System.out.println("양의 정수(0포함)를 입력하세요.");
                 scanner.nextLine();
                 continue;
@@ -54,10 +54,10 @@ public class App {
                     System.out.println("수정할 결과가 없습니다.");
                     continue;
                 }
-
+                System.out.println("현재 저장된 값: "+resultList);
                 System.out.print("몇 번째 결과 값을 수정할까요?(1~" +  resultList.size() + "):");
-                int i = scanner.nextInt() - 1;
-                if (i < 0 || i >= resultList.size()){
+                int i = scanner.nextInt() - 1; //인덱스 값
+                if (i < 0 || i >= resultList.size()){ // 범위 밖인 경우
                     System.out.println("잘못된 번호입니다.");
                     continue;
                 }
