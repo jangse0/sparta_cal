@@ -1,8 +1,9 @@
-package com.example.calculator;
+package com.example.calculator.lv1;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class App {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -32,9 +33,9 @@ public class Calculator {
 
 
             System.out.print("사칙연산 기호를 입력하세요: ");
-            char symbol = scanner.next().charAt(0);
+            char operator= scanner.next().charAt(0);
 
-            switch (symbol) {
+            switch (operator) {
                 case '+':
                     result = n1 + n2;
                     break;
@@ -58,7 +59,7 @@ public class Calculator {
 
 
             System.out.println("---------------\n결과는 "+ result);
-            System.out.print("더 계산하시겠습니까? (exit 입력 시 종료)");
+            System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) 계속 하시려면 아무키를 입력하세요.");
 
             if (scanner.next().equals("exit"))
                 break;
