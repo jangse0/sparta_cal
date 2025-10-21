@@ -1,5 +1,6 @@
 package com.example.calculator.lv3;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.List;
 
@@ -22,7 +23,12 @@ public class App {
 
                 double result = cal3.calculate(num1, num2, OperatorType.valueOf(operator));
                 System.out.println("----------------\n결과는 " + result);
-            } catch (IllegalArgumentException | ArithmeticException e) {
+            } catch(InputMismatchException e){
+                System.out.println("양의 정수(0포함)를 입력하세요.");
+                scanner.nextLine();
+                continue;
+            }
+            catch (IllegalArgumentException | ArithmeticException e) {
                 System.out.println(e.getMessage());
                 continue;
             }
