@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-
+    //연산 결과 저장
     private List<Double> results = new ArrayList<>();
 
     public double calculate(int a, int b, char operator)
