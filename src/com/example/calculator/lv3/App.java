@@ -24,7 +24,7 @@ public class App {
                 double result = cal3.calculate(num1, num2, OperatorType.valueOf(operator));
                 System.out.println("----------------\n결과는 " + result);
             } catch(InputMismatchException e){
-                System.out.println("양의 정수(0포함)를 입력하세요.");
+                System.out.println("실수를 입력하세요.");
                 scanner.nextLine();
                 continue;
             }
